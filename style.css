@@ -144,3 +144,50 @@ nav {
   font-weight: 300;
   transform: rotate(90deg);
 }
+
+.progress {
+  padding-top: 40px;
+  align-items: center;
+}
+
+.box {
+  position: relative;
+}
+
+.chart-description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.chart-number {
+  font-size: 72px;
+  font-weight: bold;
+}
+
+.chart-number.no1 {
+  color: #f34739;
+}
+
+.chart-number.no2 {
+  color: #009989;
+}
+
+.chart-number.no3 {
+  color: #152b3c;
+}
+
+.progress .decription {
+  width: 247px;
+  height: 69px;
+  font-size: 18px;
+  color: rgb(69, 69, 69);
+  text-align: center;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
