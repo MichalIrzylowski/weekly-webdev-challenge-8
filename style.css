@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "Quicksand";
   text-align: center;
+  letter-spacing: 1px;
 }
 
 header {
@@ -99,6 +100,7 @@ hr {
   background-image: url(images/Color_Fill_1.png);
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 400px;
   color: rgb(255, 255, 255);
@@ -109,17 +111,26 @@ hr {
 .question {
   font-size: 24px;
   font-weight: 300;
+  position: relative;
+  width: 90%;
 }
 .question::before,
 .question::after {
   content: "";
   display: inline-block;
-  margin: 0 12px;
   height: 1px;
   width: 100px;
   background-color: rgba(255, 255, 255, 0.4);
-  position: relative;
-  bottom: 25%;
+  position: absolute;
+  bottom: 50%;
+}
+
+.question::before {
+  left: 0;
+}
+
+.question::after {
+  right: 0;
 }
 
 .title {
@@ -195,8 +206,10 @@ hr {
   margin-bottom: 50px;
 }
 
-.team {
-  background-image: url("images/our_team.png");
+.section-header {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 200px;
   justify-content: center;
@@ -211,44 +224,57 @@ hr {
   align-items: center;
 }
 
-.team-meet_us {
+.section-header h4 {
   font-size: 18px;
   color: rgb(255, 255, 255);
   font-weight: 300;
+  position: relative;
+  width: 252px;
 }
 
-.team-meet_us::before,
-.team-meet_us::after {
+.section-header h4::before,
+.section-header h4::after {
   content: "";
-  width: 60px;
+  width: 70px;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.4);
   display: inline-block;
-  margin: 0 20px;
-  position: relative;
-  bottom: 25%;
+  position: absolute;
+  bottom: 50%;
+}
+.section-header h4::before {
+  left: 0;
 }
 
-.our_team {
+.section-header h4::after {
+  right: 0;
+}
+
+.section-header h4.portfolio::before,
+.section-header h4.portfolio::after {
+  width: 30px;
+}
+
+.Section-title {
   font-size: 48px;
   color: rgb(255, 255, 255);
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.adrianna {
+.person {
   width: 100%;
   height: 520px;
 }
 
-.adrianna-up {
+.person-up {
   height: 280px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
 }
 
-.adrianna-description {
+.person-description {
   border: solid #00000a;
   border-width: 3px 3px 0 3px;
   width: 93.75%;
@@ -259,32 +285,31 @@ hr {
   align-items: center;
 }
 
-.adrianna-title {
+.person-title {
   font-size: 24px;
   font-weight: 300;
 }
 
-.adrianna-subtitle {
+.person-subtitle {
   font-size: 10px;
   font-weight: 300;
 }
 
-.adrianna-text {
-  width: 359px;
+.person-text {
   font-size: 20px;
   color: rgb(69, 69, 69);
 }
 
-.adrianna-down {
+.person-down {
   height: 240px;
-  background-image: url("images/adrianna.png");
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
 }
 
-.adrianna-down-border {
+.person-down-border {
   width: 93.75%;
   height: 91.667%;
   border: solid #fff;
@@ -302,6 +327,104 @@ hr {
   width: 40px;
 }
 
+.section-wrapper {
+  margin-bottom: 40px;
+}
+
+.portfolio-picture-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-picture-wrapper div:nth-child(1) {
+  background-image: url("images/portfolio-images/Layer_48.png");
+}
+
+.portfolio-picture-wrapper div:nth-child(2) {
+  background-image: url("images/portfolio-images/Layer_49.png");
+}
+
+.portfolio-picture-wrapper div:nth-child(3) {
+  background-image: url("images/portfolio-images/Layer_50.png");
+}
+
+.portfolio-picture-wrapper div:nth-child(4) {
+  background-image: url("images/portfolio-images/Layer_51.png");
+}
+
+.portfolio-picture-wrapper div:nth-child(5) {
+  background-image: url("images/portfolio-images/Layer_52.png");
+}
+
+.portfolio-picture-wrapper div:nth-child(6) {
+  background-image: url("images/portfolio-images/Layer_53.png");
+}
+
+.portfolio-picture-wrapper div:nth-child(7) {
+  background-image: url("images/portfolio-images/Layer_54.png");
+}
+
+.portfolio-picture-wrapper div:nth-child(8) {
+  background-image: url("images/portfolio-images/Layer_55.png");
+}
+
+.portfolio-picture-wrapper div:nth-child(9) {
+  background-image: url("images/portfolio-images/Layer_56.png");
+}
+
+.portfolio-picture-wrapper div:nth-child(10) {
+  background-image: url("images/portfolio-images/Layer_57.png");
+}
+
+.portfolio-picture-wrapper div:nth-child(11) {
+  background-image: url("images/portfolio-images/Layer_58.png");
+}
+
+.portfolio-picture-wrapper div:nth-child(12) {
+  background-image: url("images/portfolio-images/Layer_59.png");
+}
+
+.portfolio-picture {
+  width: 160px;
+  height: 160px;
+  min-width: 120px;
+  min-height: 120px;
+  flex-shrink: 1;
+  flex-grow: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(100%);
+  transition: 0.4s;
+  position: relative;
+}
+
+.portfolio-picture img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.4s 0.2s;
+}
+
+.portfolio-picture:hover {
+  filter: grayscale(0);
+}
+
+.portfolio-picture:hover img {
+  opacity: 1;
+  filter: invert(100%);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 320px) {
+  .question::before,
+  .question::after {
+    width: 50px;
+  }
+}
+
 @media screen and (max-width: 360px) {
   .question {
     font-size: 22px;
@@ -309,7 +432,7 @@ hr {
 
   .question::before,
   .question::after {
-    width: 30px;
+    width: 70px;
   }
 
   .title {
