@@ -15,7 +15,8 @@ header {
 }
 
 section,
-.team-description {
+.team-description,
+footer {
   display: flex;
   flex-direction: column;
 }
@@ -30,6 +31,39 @@ hr {
   background-color: #f34739;
   border: none;
   margin: 20px 0 30px 0;
+}
+
+footer {
+  justify-content: center;
+  align-items: center;
+  background-color: #101010;
+  padding-top: 55px;
+}
+
+footer > div:not(:nth-child(1)) {
+  margin-top: 80px;
+}
+
+footer h5 {
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+}
+
+footer hr {
+  width: 140px;
+  height: 1px;
+  background-color: #009989;
+  border: none;
+  margin: 20px auto 30px auto;
+}
+
+footer a,
+p {
+  font-size: 18px;
+  color: rgb(74, 74, 74);
+  width: 262px;
+  text-decoration: none;
 }
 
 .logo {
@@ -255,6 +289,11 @@ hr {
   width: 30px;
 }
 
+.section-header h4.brands::before,
+.section-header h4.brands::after {
+  width: 60px;
+}
+
 .Section-title {
   font-size: 48px;
   color: rgb(255, 255, 255);
@@ -327,11 +366,12 @@ hr {
   width: 40px;
 }
 
-.section-wrapper {
+.person:last-of-type {
   margin-bottom: 40px;
 }
 
-.portfolio-picture-wrapper {
+.portfolio-picture-wrapper,
+.brands-logos-wrapper {
   display: flex;
   flex-wrap: wrap;
 }
@@ -416,6 +456,27 @@ hr {
   opacity: 1;
   filter: invert(100%);
   cursor: pointer;
+}
+
+.brands-logo {
+  width: 160px;
+  height: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-grow: 1;
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transition: 0.2s;
+}
+
+.brands-logo:hover {
+  filter: grayscale(0);
+}
+
+.copyrights {
+  font-size: 12px;
+  background-color: #0e0e0d;
+  padding: 25px;
 }
 
 @media screen and (max-width: 320px) {
