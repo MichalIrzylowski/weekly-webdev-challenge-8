@@ -41,7 +41,7 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: #101010;
-  padding-top: 55px;
+  padding: 55px 0;
 }
 
 footer > div:not(:nth-child(1)) {
@@ -541,6 +541,7 @@ footer p {
 }
 
 .copyrights {
+  color: rgb(74, 74, 74);
   font-size: 12px;
   background-color: #0e0e0d;
   padding: 25px;
@@ -790,6 +791,7 @@ footer p {
 
   .portfolio-picture {
     width: 210px;
+    max-width: 420px;
     height: 236px;
   }
 
@@ -876,5 +878,42 @@ footer p {
   .portfolio-picture-wrapper div:nth-child(21) {
     background-image: url("images/portfolio-images-desktop/Layer44.png");
     display: block;
+  }
+
+  .brands-logo:nth-child(13) {
+    display: block;
+  }
+  .brands-logo:nth-child(14) {
+    display: block;
+  }
+  .brands-logo:nth-child(15) {
+    display: block;
+  }
+  .brands-logo:nth-child(16) {
+    display: block;
+  }
+  .brands-logo:nth-child(17) {
+    display: block;
+  }
+  .brands-logo:nth-child(18) {
+    display: block;
+  }
+
+  .section-header.brands {
+    background-image: url("images/brands-desktop.png");
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  footer div:not(:nth-child(1)) {
+    margin-top: 0;
+  }
+
+  footer div:nth-child(3) p {
+    text-align: left;
   }
 }
