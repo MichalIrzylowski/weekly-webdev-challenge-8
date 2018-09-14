@@ -1,8 +1,13 @@
 const burger = document.querySelector(".burger");
+const menu = document.querySelector(".menu");
 const progressBars = document.querySelectorAll(".chart");
 
 burger.addEventListener("click", function() {
   this.classList.toggle("active");
+});
+
+menu.addEventListener("click", function() {
+  burger.classList.toggle("active");
 });
 
 new EasyPieChart(progressBars[0], {
